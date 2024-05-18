@@ -1,23 +1,32 @@
-import { StyleSheet, Platform, View } from "react-native";
+import {
+  StyleSheet,
+  Platform,
+  View,
+  ScrollView,
+  Pressable,
+} from "react-native";
 
 import { Text, type TextProps } from "react-native";
 import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import Updates from "@/components/home/Updates";
 
 const StatusBar = ({}) => {
-  const style = StyleSheet.create({Status:{
-    backgroundColor: "#EDEDED",
-    alignSelf: "flex-start",
-    paddingLeft: 12,
-    paddingRight: 12,
-    paddingTop: 6,
-    paddingBottom: 6,
-    borderRadius: 999,
-    overflow: "hidden",
-  }});
+  const style = StyleSheet.create({
+    Status: {
+      backgroundColor: "#EDEDED",
+      alignSelf: "flex-start",
+      paddingLeft: 12,
+      paddingRight: 12,
+      paddingTop: 6,
+      paddingBottom: 6,
+      borderRadius: 999,
+      overflow: "hidden",
+    },
+  });
   return (
-    <View style={ style.Status }>
+    <View style={style.Status}>
       <Text style={[{ color: "#979797" }]}>
         <Text style={[{ color: "#484848", fontWeight: 500 }]}>STATUS</Text>{" "}
         Zombie Bounty Hunter
@@ -26,13 +35,17 @@ const StatusBar = ({}) => {
   );
 };
 const Status = ({}) => {
+  const caption = [
+    "EVEN THE JOKER IS SCARED OF THE IRS",
+    "YOU ARE NOT HUMAN IF YOU ARE NOT PAYING TAXES",
+    "THE IRS COLLECTED 4.7 TRILLION DOLLARS IN REVENUE",
+  ];
   return (
     <Text style={[{ color: "#9F9F9F", fontSize: 12 }]}>
-      EVEN THE JOKER IS SCARED OF THE IRS
+      {caption[Math.floor(Math.random() * caption.length)]}
     </Text>
   );
 };
-
 export default function HomeScreen() {
   return (
     <>
@@ -44,38 +57,7 @@ export default function HomeScreen() {
           </ThemedText>
         </ThemedView>
         <StatusBar />
-        <ThemedView style={styles.stepContainer}>
-          <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-          <ThemedText>
-            Edit{" "}
-            <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
-            to see changes. Press{" "}
-            <ThemedText type="defaultSemiBold">
-              {Platform.select({ ios: "cmd + d", android: "cmd + m" })}
-            </ThemedText>{" "}
-            to open developer tools.
-          </ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.stepContainer}>
-          <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          <ThemedText>
-            Tap the Explore tab to learn more about what's included in this
-            starter app.
-          </ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.stepContainer}>
-          <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-          <ThemedText>
-            When you're ready, run{" "}
-            <ThemedText type="defaultSemiBold">
-              npm run reset-project
-            </ThemedText>{" "}
-            to get a fresh <ThemedText type="defaultSemiBold">app</ThemedText>{" "}
-            directory. This will move the current{" "}
-            <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
-            <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-          </ThemedText>
-        </ThemedView>
+        <Updates/>
       </StandardView>
     </>
   );
