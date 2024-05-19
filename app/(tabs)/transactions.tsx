@@ -6,6 +6,7 @@ import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import HomePageNotification from "@/components/home/Notification"
+import { configureLayoutAnimationBatch } from "react-native-reanimated/lib/typescript/reanimated2/core";
 
 const StatusBar = ({}) => {
   const style = StyleSheet.create({Status:{
@@ -34,7 +35,7 @@ const Status = ({}) => {
     'THE IRS COLLECTED 4.7 TRILLION DOLLARS IN REVENUE'
   ]
   return (
-    <Text style={[{ color: "#9F9F9F", fontSize: 12 }]}>
+    <Text style={[{ color: "#9F9F9F", fontSize: 14 }]}>
       {caption[Math.floor(Math.random()*caption.length)]}
     </Text>
   );
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   stepContainer: {
-    gap: 8,
+    gap: 12,
     marginBottom: 8,
   },
   reactLogo: {
