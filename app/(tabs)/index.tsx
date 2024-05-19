@@ -11,7 +11,6 @@ import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import Updates from "@/components/home/Updates";
-import AntDesign from '@expo/vector-icons/AntDesign';
 
 const StatusBar = ({}) => {
   const style = StyleSheet.create({
@@ -59,7 +58,6 @@ export default function HomeScreen() {
         </ThemedView>
         <StatusBar />
         <Updates/>
-        We detected your <Text style={[{ color: "#F75252" }]}>RECENT ENCOUNTER</Text> with the undead. Did you mean to update your life status?
       </StandardView>
     </>
   );
