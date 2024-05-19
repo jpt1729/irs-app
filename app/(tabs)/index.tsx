@@ -11,6 +11,7 @@ import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import Updates from "@/components/home/Updates";
+import UpdateOptions from "@/components/home/updateOptions";
 
 const StatusBar = ({}) => {
   const style = StyleSheet.create({
@@ -58,6 +59,7 @@ export default function HomeScreen() {
         </ThemedView>
         <StatusBar />
         <Updates/>
+        <UpdateOptions/>
       </StandardView>
     </>
   );

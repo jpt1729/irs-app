@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
     StyleSheet,
@@ -6,6 +6,7 @@ import {
     Pressable,
     Text,
   } from "react-native";
+
 import HomePageNotification from "./Notification";
 const updates = [
     {
@@ -55,19 +56,17 @@ const updates = [
     },
   ];
 export default function Updates({}){
+    const [opened, setOpened] = useState(false)
     const onPress = ({}) => {
-      console.log()
+        setOpened(!opened)
     }
     return (
-      <ScrollView style={styles.stepContainer}>
-        {updates &&
-          updates
-            .slice(0, 3)
-            .map((update, _i) => <HomePageNotification key={_i} {...update} />)}
+      <ScrollView style={styles.updateContainer}>
+        {updates && (opened ? updates.map((update, _i) => <HomePageNotification key={_i} {...update} />) : updates.slice(0, 3).map((update, _i) => <HomePageNotification key={_i} {...update} />))}
         {updates && updates.length > 3 && (
           <Pressable onPress={onPress}>
             <Text style={[{ color: "#8E8E8E", opacity: 0.5 }]}>
-              Tap to read {updates.length - 3} more updates
+              {opened ? `Minimize` : `Tap to read ${updates.length - 3} more updates`}
             </Text>
           </Pressable>
         )}
@@ -83,6 +82,12 @@ export default function Updates({}){
     stepContainer: {
       gap: 8,
       marginBottom: 8,
+    },
+    updateContainer: {
+        gap: 8,
+        marginBottom: 8,
+        flex: 1,
+        flexDirection:"column",
     },
     reactLogo: {
       height: 178,
