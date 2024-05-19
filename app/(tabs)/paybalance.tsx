@@ -11,7 +11,6 @@ import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import Updates from "@/components/home/Updates";
-import AntDesign from '@expo/vector-icons/AntDesign';
 
 const StatusBar = ({}) => {
   const style = StyleSheet.create({
@@ -29,8 +28,7 @@ const StatusBar = ({}) => {
   return (
     <View style={style.Status}>
       <Text style={[{ color: "#979797" }]}>
-        <Text style={[{ color: "#484848", fontWeight: 500 }]}>STATUS</Text>{" "}
-        Zombie Bounty Hunter
+        <Text style={[{ color: "#484848", fontWeight: 500 }]}>-3,400,347 bottlecaps</Text>{" "}
       </Text>
     </View>
   );
@@ -54,12 +52,11 @@ export default function HomeScreen() {
         <ThemedView style={styles.titleContainer}>
           <Status />
           <ThemedText type="title">
-            Welcome to <Text style={[{ color: "#F75252" }]}>ApocaLedger</Text>
+            Paying Your <Text style={[{ color: "#F75252" }]}>Outstanding Balance</Text>
           </ThemedText>
         </ThemedView>
         <StatusBar />
-        <Updates/>
-        We detected your <Text style={[{ color: "#F75252" }]}>RECENT ENCOUNTER</Text> with the undead. Did you mean to update your life status?
+        
       </StandardView>
     </>
   );
