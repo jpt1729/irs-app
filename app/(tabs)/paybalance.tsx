@@ -28,8 +28,7 @@ const StatusBar = ({}) => {
   return (
     <View style={style.Status}>
       <Text style={[{ color: "#979797" }]}>
-        <Text style={[{ color: "#484848", fontWeight: 500 }]}>STATUS</Text>{" "}
-        Zombie Bounty Hunter
+        <Text style={[{ color: "#484848", fontWeight: 500 }]}>-3,400,347 bottlecaps</Text>{" "}
       </Text>
     </View>
   );
@@ -42,7 +41,7 @@ const Status = ({}) => {
     "THE ONLY THINGS CERTAIN IN LIFE ARE DEATH AND TAXES",
   ];
   return (
-    <Text style={[{ color: "#9F9F9F"}]}>
+    <Text style={[{ color: "#9F9F9F", fontSize: 12 }]}>
       {caption[Math.floor(Math.random() * caption.length)]}
     </Text>
   );
@@ -54,12 +53,11 @@ export default function HomeScreen() {
         <ThemedView style={styles.titleContainer}>
           <Status />
           <ThemedText type="title">
-            Welcome to <Text style={[{ color: "#F75252"}]}>ApocaLedger</Text>
+            Paying Your <Text style={[{ color: "#F75252" }]}>Outstanding Balance</Text>
           </ThemedText>
         </ThemedView>
         <StatusBar />
-
-        <Updates/>
+        
       </StandardView>
     </>
   );
@@ -69,7 +67,6 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "column",
     gap: 8,
-
   },
   stepContainer: {
     gap: 8,
