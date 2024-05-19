@@ -58,6 +58,7 @@ export default function HomeScreen() {
           </ThemedText>
         </ThemedView>
         <StatusBar />
+
         <Updates/>
         <UpdateOptions/>
       </StandardView>
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "column",
     gap: 8,
+
   },
   stepContainer: {
     gap: 8,

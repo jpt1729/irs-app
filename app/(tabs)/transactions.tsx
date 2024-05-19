@@ -250,10 +250,10 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     backgroundColor: '#FFF',
     padding: 10,
-    shadowColor: "#000", // Shadow color
-    shadowOffset: { width: 5, height: 0 }, // Offset only on the right
-    shadowOpacity: 1, // Full opacity
-    shadowRadius: 0, // Blur radius
+    shadowColor: "#000",
+    shadowOffset: { width: 3, height: 5 }, 
+    shadowOpacity: 0.05, 
+    shadowRadius: 2,
     elevation: 2, 
     color: "#FCF8FF",
   },
