@@ -22,7 +22,7 @@ const StatusBar = () => {
   });
   return (
     <View style={style.Status}>
-      <Text style={[{ color: "#979797" }]}>From the past 30 days</Text>
+      <Text style={[{ color: "#979797", fontSize: 14}]}>From the past 30 days</Text>
     </View>
   );
 };
@@ -41,8 +41,8 @@ const Status = () => {
 };
 
 const CreditCard = () => {
-  const name = "John Tan-Aristy";
-  const pin = "1234";
+  const name = "Zachary Latta";
+  const pin = "3287";
 
   const style = StyleSheet.create({
     cardStyle: {
@@ -56,7 +56,6 @@ const CreditCard = () => {
       marginTop: 20,
       paddingBottom: 20,
       borderRadius: 10,
-      // overflow: "hidden",
     },
     visaStyle: {
       height: 70,
@@ -85,7 +84,7 @@ const CreditCard = () => {
       color: "#FFF",
       fontFamily: "PhantomSans",
       fontSize: 15,
-      letterSpacing: 1,
+      letterSpacing: 0.5,
       position: "absolute",
       marginTop: 155,
       marginLeft: 20,
@@ -169,7 +168,7 @@ const Data = [
   },
   {
     title: "Payment to IRS",
-    amount: -170.99,
+    amount: - 170.99,
     timeStamp: "May 14, 2024 at 3:25 PM",
   },
   {
@@ -179,7 +178,7 @@ const Data = [
   },
   {
     title: "Payment to IRS",
-    amount: -44.99,
+    amount: - 44.99,
     timeStamp: "May 18, 2024 at 6:00 AM",
   },
 ];
@@ -224,10 +223,12 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "column",
     gap: 8,
+        color: "#FCF8FF",
   },
   stepContainer: {
     gap: 12,
     marginBottom: 8,
+    color: "#FCF8FF"
   },
   reactLogo: {
     height: 178,
@@ -261,6 +262,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 5,
+    color: "#FCF8FF"
   },
   itemTitle: {
     fontSize: 20,
@@ -273,8 +275,8 @@ const styles = StyleSheet.create({
     marginRight: 80,
   },
   itemTimeStamp: {
-    fontSize: 12,
-    color: "#111",
+    fontSize: 13,
+    color: "gray",
     marginTop: 5,
   },
 });

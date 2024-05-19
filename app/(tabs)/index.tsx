@@ -42,7 +42,7 @@ const Status = ({}) => {
     "THE IRS COLLECTED 4.7 TRILLION DOLLARS IN REVENUE",
   ];
   return (
-    <Text style={[{ color: "#9F9F9F", fontSize: 12 }]}>
+    <Text style={[{ color: "#9F9F9F"}]}>
       {caption[Math.floor(Math.random() * caption.length)]}
     </Text>
   );
@@ -54,7 +54,7 @@ export default function HomeScreen() {
         <ThemedView style={styles.titleContainer}>
           <Status />
           <ThemedText type="title">
-            Welcome to <Text style={[{ color: "#F75252" }]}>ApocaLedger</Text>
+            Welcome to <Text style={[{ color: "#F75252"}]}>ApocaLedger</Text>
           </ThemedText>
         </ThemedView>
         <StatusBar />

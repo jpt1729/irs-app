@@ -4,8 +4,6 @@ import { Text, Linking, StyleSheet, View } from "react-native";
 
 const YourComponent = () => {
   const handlePress = () => {
-    // Replace with the URL or path to the page you want to link to
-    Linking.openURL("https://yourapp.com/update-life-status");
   };
 
   return (
