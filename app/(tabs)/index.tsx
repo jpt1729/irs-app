@@ -40,6 +40,7 @@ const Status = ({}) => {
     "EVEN THE JOKER IS SCARED OF THE IRS",
     "YOU ARE NOT HUMAN IF YOU ARE NOT PAYING TAXES",
     "THE IRS COLLECTED 4.7 TRILLION DOLLARS IN REVENUE",
+    "THE ONLY THING CERTAIN IS DEATH AND THE IRS"
   ];
   return (
     <Text style={[{ color: "#9F9F9F"}]}>
