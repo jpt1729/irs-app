@@ -17,6 +17,7 @@ const StatusBar = () => {
       paddingBottom: 6,
       borderRadius: 999,
       overflow: "hidden",
+    
     },
   });
   return (
@@ -186,7 +187,7 @@ const Data = [
 export default function HomeScreen() {
   return (
     <>
-      <StandardView>
+      <StandardView >
         <ThemedView style={styles.titleContainer}>
           <Status />
           <ThemedText type="title">
@@ -198,22 +199,28 @@ export default function HomeScreen() {
         <Options />
         <FlatList
           data={Data}
+          showsVerticalScrollIndicator={false}
           renderItem={({ item }) => {
             return (
               <View style={styles.item}>
-                <Text style={styles.itemTitle}>{item.title}</Text>
-                <Text style={styles.itemAmount}>{item.amount}</Text>
+                <View style={styles.textContainer}>
+                  <Text style={styles.itemTitle}>{item.title}</Text>
+                  <Text style={styles.itemAmount}>{item.amount}</Text>
+                </View>
                 <Text style={styles.itemTimeStamp}>{item.timeStamp}</Text>
               </View>
             );
           }}
-        />
+/>
       </StandardView>
     </>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#FCF8FF",
+  },
   titleContainer: {
     flexDirection: "column",
     gap: 8,
@@ -237,20 +244,37 @@ const styles = StyleSheet.create({
   },
   item: {
     width: 350,
-    height: 50,
-    borderRadius: 5,
-    backgroundColor: "#f9c2ff",
+    height: 75,
+    borderRadius: 12,
+    marginBottom: 15,
+    marginLeft: 5,
+    backgroundColor: '#FFF',
+    padding: 10,
+    shadowColor: "#000", // Shadow color
+    shadowOffset: { width: 5, height: 0 }, // Offset only on the right
+    shadowOpacity: 1, // Full opacity
+    shadowRadius: 0, // Blur radius
+    elevation: 2, 
+    color: "#FCF8FF",
+  },
+  textContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 5,
   },
   itemTitle: {
-    fontSize: 12,
+    fontSize: 20,
     color: "#111",
+    fontWeight: "bold",
   },
   itemAmount: {
-    fontSize: 12,
+    fontSize: 16,
     color: "#111",
+    marginRight: 80,
   },
   itemTimeStamp: {
     fontSize: 12,
     color: "#111",
+    marginTop: 5,
   },
 });
