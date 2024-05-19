@@ -13,9 +13,14 @@ import { Text, type TextProps } from "react-native";
 import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+<<<<<<< HEAD
 import HomePageNotification from "@/components/home/Notification";
 import { Float } from "react-native/Libraries/Types/CodegenTypes";
 // import { FlatList } from "react-native-gesture-handler";
+=======
+import HomePageNotification from "@/components/home/Notification"
+import { configureLayoutAnimationBatch } from "react-native-reanimated/lib/typescript/reanimated2/core";
+>>>>>>> 57b77c54f5a25b7d078ed3963088b8ac5c3a56a4
 
 const StatusBar = ({}) => {
   const style = StyleSheet.create({
@@ -44,8 +49,13 @@ const Status = ({}) => {
     "THE IRS COLLECTED 4.7 TRILLION DOLLARS IN REVENUE",
   ];
   return (
+<<<<<<< HEAD
     <Text style={[{ color: "#9F9F9F", fontSize: 12 }]}>
       {caption[Math.floor(Math.random() * caption.length)]}
+=======
+    <Text style={[{ color: "#9F9F9F", fontSize: 14 }]}>
+      {caption[Math.floor(Math.random()*caption.length)]}
+>>>>>>> 57b77c54f5a25b7d078ed3963088b8ac5c3a56a4
     </Text>
   );
 };
@@ -291,7 +301,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   stepContainer: {
-    gap: 8,
+    gap: 12,
     marginBottom: 8,
   },
   reactLogo: {
