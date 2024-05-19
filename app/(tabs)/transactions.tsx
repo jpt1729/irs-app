@@ -1,28 +1,12 @@
 import React from "react";
-import {
-  StyleSheet,
-  Platform,
-  View,
-  ScrollView,
-  Image,
-  FlatList,
-} from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-
-import { Text, type TextProps } from "react-native";
+import { StyleSheet, View, FlatList, Image } from "react-native";
+import { Text } from "react-native";
 import StandardView from "@/components/StandardView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-<<<<<<< HEAD
 import HomePageNotification from "@/components/home/Notification";
-import { Float } from "react-native/Libraries/Types/CodegenTypes";
-// import { FlatList } from "react-native-gesture-handler";
-=======
-import HomePageNotification from "@/components/home/Notification"
-import { configureLayoutAnimationBatch } from "react-native-reanimated/lib/typescript/reanimated2/core";
->>>>>>> 57b77c54f5a25b7d078ed3963088b8ac5c3a56a4
 
-const StatusBar = ({}) => {
+const StatusBar = () => {
   const style = StyleSheet.create({
     Status: {
       backgroundColor: "#EDEDED",
@@ -42,25 +26,20 @@ const StatusBar = ({}) => {
   );
 };
 
-const Status = ({}) => {
+const Status = () => {
   const caption = [
     "EVEN THE JOKER IS SCARED OF THE IRS",
     "YOU ARE NOT HUMAN IF YOU ARE NOT PAYING TAXES",
     "THE IRS COLLECTED 4.7 TRILLION DOLLARS IN REVENUE",
   ];
   return (
-<<<<<<< HEAD
-    <Text style={[{ color: "#9F9F9F", fontSize: 12 }]}>
-      {caption[Math.floor(Math.random() * caption.length)]}
-=======
     <Text style={[{ color: "#9F9F9F", fontSize: 14 }]}>
-      {caption[Math.floor(Math.random()*caption.length)]}
->>>>>>> 57b77c54f5a25b7d078ed3963088b8ac5c3a56a4
+      {caption[Math.floor(Math.random() * caption.length)]}
     </Text>
   );
 };
 
-const CreditCard = ({}) => {
+const CreditCard = () => {
   const name = "John Tan-Aristy";
   const pin = "1234";
 
@@ -135,7 +114,7 @@ const CreditCard = ({}) => {
   );
 };
 
-const Options = ({}) => {
+const Options = () => {
   const style = StyleSheet.create({
     optionsStyle: {
       marginTop: 20,
@@ -181,65 +160,6 @@ const Options = ({}) => {
   );
 };
 
-const Transactions = ({}) => {
-  const style = StyleSheet.create({
-    transactionsContainer: {},
-    transaction: {
-      width: 350,
-    },
-  });
-
-  return <View style={style.transactionsContainer}></View>;
-};
-
-// const updates = [
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 to receive your cerebral rebate. Don’t make us come looking for you.",
-//     date: new Date(2034, 3, 12),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 immediately or you might spy some very persistent government drones.",
-//     date: new Date(2034, 3, 13),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 now, or prepare for a surprise visit from our Tax Enforcement Zombies. You won’t like it.",
-//     date: new Date(2034, 3, 14),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 to receive your cerebral rebate. Don’t make us come looking for you.",
-//     date: new Date(2034, 3, 12),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 immediately or you might spy some very persistent government drones.",
-//     date: new Date(2034, 3, 13),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 now, or prepare for a surprise visit from our Tax Enforcement Zombies. You won’t like it.",
-//     date: new Date(2034, 3, 14),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 to receive your cerebral rebate. Don’t make us come looking for you.",
-//     date: new Date(2034, 3, 12),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 immediately or you might spy some very persistent government drones.",
-//     date: new Date(2034, 3, 13),
-//   },
-//   {
-//     update:
-//       "Your paperwork from the 2033-2034 tax season is due. Fill out your 1040 now, or prepare for a surprise visit from our Tax Enforcement Zombies. You won’t like it.",
-//     date: new Date(2034, 3, 14),
-//   },
-// ];
-
 const Data = [
   {
     title: "From Alex Nguyen",
@@ -263,8 +183,6 @@ const Data = [
   },
 ];
 
-// type ItemProps = { title: string; amount: Float; timeStamp: string };
-
 export default function HomeScreen() {
   return (
     <>
@@ -285,7 +203,7 @@ export default function HomeScreen() {
               <View style={styles.item}>
                 <Text style={styles.itemTitle}>{item.title}</Text>
                 <Text style={styles.itemAmount}>{item.amount}</Text>
-                <Text style={styles.item}>{item.timeStamp}</Text>
+                <Text style={styles.itemTimeStamp}>{item.timeStamp}</Text>
               </View>
             );
           }}
